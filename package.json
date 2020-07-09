@@ -1,0 +1,19 @@
+{
+  "name": "vad",
+  "version": "0.0.2",
+  "description": "functinal Js object validator ",
+  "main": "dist/index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/buuer/vad.git"
+  },
+  "keywords": [
+    "validator"
+  ],
+  "author": "buuer",
+  "license": "MIT ",
+  "bugs": {
+    "url": "https://github.com/buuer/vad/issues"
+  },
+  "homepage": "https://github.com/buuer/vad#readme"
+}
