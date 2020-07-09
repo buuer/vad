@@ -3,7 +3,7 @@ const UNDF = void 0
 
 const reg = {
   email: /^\w+@\w+\.\w{2,6}$/,
-  mobile: /^1[3-9]\d{9}$/, // china +86
+  mobile: /^1[3-9]\d{9}$/, // +86 phone num
   // url: /url/,
 }
 
@@ -89,7 +89,7 @@ export const isNotEq = checkValRt('isNotEq', valNotEq)
 
 export const pattern = checkValRt('pattern', valTest)
 export const isEmail = checkVal('email', valTest, reg.email)
-export const isMobile = checkVal('mobile', valTest, reg.email)
+export const isMobile = checkVal('mobile', valTest, reg.mobile)
 
 export const range = checkValRt('range', valRange)
 export const lenRange = checkValRt('lenRange', (val: any, opt: rangeOpt) =>

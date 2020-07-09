@@ -99,6 +99,24 @@ Deno.test('validator | pattern', () => {
     .then((msg) => assertStrictEquals(msg, 'pattern error'))
 })
 
+Deno.test('validator | isEmail', () => {
+  const isEmail = vad.isEmail('pattern error')
+
+  return isEmail('name@domain.com')
+    .then((msg) => assertStrictEquals(msg, undefined))
+    .then(() => isEmail('nema@domain.c'))
+    .then((msg) => assertStrictEquals(msg, 'pattern error'))
+})
+
+Deno.test('validator | isMobile', () => {
+  const isMobile = vad.isMobile('pattern error')
+
+  return isMobile('13512345678')
+    .then((msg) => assertStrictEquals(msg, undefined))
+    .then(() => isMobile('121521451221'))
+    .then((msg) => assertStrictEquals(msg, 'pattern error'))
+})
+
 Deno.test('validator | isEmpty', () => {
   const isEmpty = vad.isEmpty()
 
